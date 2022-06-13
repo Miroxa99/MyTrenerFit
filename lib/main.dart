@@ -17,9 +17,11 @@ class MyFitnesApp extends StatelessWidget {
       //   appBar: AppBar(
       //     title: Text("Привет"),
       // ),
-        body: Center(
+        body: Container(
+          color: Color(0xffFF0000),
+        child: Center(
           child:
-          Image(image: AssetImage('Assets/images/oblojka.jpg'),
+          Image.asset('Assets/images/oblojka.jpg'),
         ),
     ),
       ),
