@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+
+import 'Pages/2ekran.dart';
 
 void main() => runApp(MyFitnesApp());
 
@@ -10,24 +13,25 @@ class MyFitnesApp extends StatelessWidget {
     return MaterialApp(
       title: 'Мой тренер',
       theme: ThemeData(
-        brightness: Brightness.light,
-            primarySwatch: Colors.deepPurple
-      ),
+          brightness: Brightness.light, primarySwatch: Colors.deepPurple),
       home: Scaffold(
-      //   appBar: AppBar(
-      //     title: Text("Привет"),
-      // ),
         body: Container(
-          color: Color(0xffFF0000),
-        child: Center(
-          child:
-          Image.asset('Assets/images/oblojka.jpg'),
+          width: double.infinity,
+          height: double.infinity,
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage('Assets/images/oblojka.jpg'),
+              fit: BoxFit.cover,
+            ),
+          ),
+          child: Center(
+              child: ElevatedButton(
+                  onPressed: () => Menu(),
+                  child: Text('Коснитесь, что бы начать',
+                      style: GoogleFonts.oswald(
+                          fontSize: 25, color: Color(0xffDAEEB2))))),
         ),
-    ),
       ),
     );
   }
-
-
-
 }
