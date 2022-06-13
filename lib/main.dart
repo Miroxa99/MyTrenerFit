@@ -7,6 +7,25 @@ class MyFitnesApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return MaterialApp(
+      title: 'Мой тренер',
+      theme: ThemeData(
+        brightness: Brightness.light,
+            primarySwatch: Colors.deepPurple
+      ),
+      home: Scaffold(
+      //   appBar: AppBar(
+      //     title: Text("Привет"),
+      // ),
+        body: Center(
+          child:
+          Image(image: AssetImage('Assets/images/oblojka.jpg'),
+        ),
+    ),
+      ),
+    );
   }
+
+
+
 }
