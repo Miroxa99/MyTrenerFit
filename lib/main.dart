@@ -3,17 +3,19 @@ import 'package:google_fonts/google_fonts.dart';
 
 import 'Pages/2ekran.dart';
 
-void main() => runApp(MyFitnesApp());
+void main() => runApp(MaterialApp(
+  home: Start(),
+));
 
-class MyFitnesApp extends StatelessWidget {
-  const MyFitnesApp({Key? key}) : super(key: key);
+class Start extends StatelessWidget {
+  const Start({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Мой тренер',
-      theme: ThemeData(
-          brightness: Brightness.light, primarySwatch: Colors.deepPurple),
+      // theme: ThemeData(
+          // brightness: Brightness.light, primarySwatch: Colors.deepPurple),
       home: Scaffold(
         body: Container(
           width: double.infinity,
@@ -26,10 +28,13 @@ class MyFitnesApp extends StatelessWidget {
           ),
           child: Center(
               child: ElevatedButton(
-                  onPressed: () => Menu(),
+                  onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => Menu()));},
                   child: Text('Коснитесь, что бы начать',
                       style: GoogleFonts.oswald(
-                          fontSize: 25, color: Color(0xffDAEEB2))))),
+                          fontSize: 25, color: Color(0xffDAEEB2)),
+                  ),
+              ),
+          ),
         ),
       ),
     );
